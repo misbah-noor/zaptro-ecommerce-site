@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getData } from '../context/DataContext'
-import FilterSection from '../components/FilterSection'
+import Filtersection from '../components/Filtersection'
 import Loading from "../assets/src_assets_Loading4.webm"
 import ProductCard from '../components/ProductCard'
 import { useCart } from '../context/CartContext'
@@ -48,7 +48,8 @@ const Products = () => {
           data?.length > 0 ? (
             <>
               <div className='flex flex-col md:flex-row gap-8'>
-                <FilterSection search={search} setSearch={setSearch} priceRange={priceRange} setPriceRange={setPriceRange} category={category} setCategory={setCategory} handleCategoryChange={handleCategoryChange} />
+                <Filtersection search={search} 
+                setSearch={setSearch} priceRange={priceRange} setPriceRange={setPriceRange} category={category} setCategory={setCategory} handleCategoryChange={handleCategoryChange} />
                 {
                   filteredData?.length > 0 ? (
                     <div className='flex flex-col justify-center items-center'>
